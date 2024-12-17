@@ -83,7 +83,7 @@ public class Livre extends javax.swing.JFrame {
         jScrollPane1.setViewportView(TableAuteur);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel2.setText("ID : ");
+        jLabel2.setText("ID Livre : ");
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("N° ISBN :");
