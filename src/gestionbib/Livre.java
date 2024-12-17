@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.*;
 import java.sql.*;
+import java.awt.event.*;
 /**
  *
 @author SBS
@@ -337,7 +338,8 @@ public class Livre extends javax.swing.JFrame {
         String enteredId = txtid.getText();
 
         // Load SQLite JDBC driver and establish connection
-        con = DataBaseConnection.getConnection();
+        Class.forName("org.sqlite.JDBC");
+        con = DriverManager.getConnection("jdbc:sqlite:gestionbib.db");
 
         // Check if the ID already exists in the database
         String checkIdQuery = "SELECT COUNT(*) FROM Livre WHERE id_livre = ?";
